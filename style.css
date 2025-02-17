@@ -2,70 +2,74 @@
 body {
     font-family: 'Inter', sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
     margin: 0;
+    overflow-x: hidden;
 }
 
-/* Main Container */
-.settings-container {
+/* Mobile Navigation */
+.mobile-nav {
     display: flex;
-    width: 85%;
-    max-width: 1200px;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Sidebar */
-.sidebar {
-    width: 260px;
-    background: linear-gradient(135deg, #007BFF, #0056b3);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #007BFF;
     color: white;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    padding: 15px;
 }
 
-.sidebar h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
+.mobile-nav h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Sidebar (Hidden by default) */
+.sidebar {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    background: #007BFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .sidebar li {
     padding: 12px;
     cursor: pointer;
-    transition: 0.3s;
-    border-radius: 6px;
+    color: white;
     font-weight: 500;
-}
-
-.sidebar li:hover {
-    background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar li.active {
     background: white;
     color: #007BFF;
     font-weight: 600;
+    border-radius: 6px;
 }
 
 /* Main Content */
 .settings-content {
-    flex: 1;
-    padding: 30px;
-    background-color: #f8f9fa;
+    width: 90%;
+    margin-top: 20px;
 }
 
 /* Settings Sections (Card UI) */
@@ -93,15 +97,15 @@ label {
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 textarea {
     resize: none;
-    height: 80px;
+    height: 100px;
 }
 
 /* Fade-in Animation */
