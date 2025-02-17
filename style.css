@@ -20,12 +20,26 @@ body {
     border-bottom-right-radius: 20px;
 }
 
-.profile-pic {
+/* Add Profile Picture (Instead of Showing an Image) */
+.add-profile-pic {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 3px solid white;
-    margin-bottom: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #007BFF;
+    border: 2px dashed #007BFF;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.add-profile-pic:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Settings List */
@@ -42,6 +56,7 @@ body {
     margin-bottom: 15px;
 }
 
+/* Section Header */
 .settings-section h3 {
     font-size: 14px;
     font-weight: 600;
@@ -50,6 +65,7 @@ body {
     padding-left: 10px;
 }
 
+/* Settings Item */
 .settings-item {
     display: flex;
     justify-content: space-between;
@@ -59,13 +75,20 @@ body {
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s ease-in-out;
 }
 
+/* Highlight Active Section */
+.settings-item:active, .settings-item:focus {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Hover Effects for Desktop */
 .settings-item:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Right Arrow */
 .arrow {
     font-size: 18px;
     color: #999;
