@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings - Mobile View</title>
+    <title>Family Networking - Settings</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -12,41 +12,53 @@
     <div class="profile-header">
         <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
         <h2>John Doe</h2>
+        <p class="family-role">Parent</p>
     </div>
 
     <!-- Settings List -->
     <div class="settings-list">
+        <!-- Profile & Account -->
         <div class="settings-section">
-            <h3>Profile</h3>
-            <div class="settings-item" onclick="showSection('account-details')">
-                <span>Account Details</span>
+            <h3>Profile & Account</h3>
+            <div class="settings-item" onclick="showSection('profile-settings')">
+                <span>Profile Information</span>
                 <span class="arrow">›</span>
             </div>
-            <div class="settings-item" onclick="showSection('documents')">
-                <span>Documents</span>
+            <div class="settings-item">
+                <span>Privacy Settings</span>
                 <span class="arrow">›</span>
             </div>
         </div>
 
+        <!-- Family Management -->
         <div class="settings-section">
-            <h3>Bank Details</h3>
+            <h3>Family Management</h3>
             <div class="settings-item">
-                <span>Bank Account</span>
+                <span>Manage Family Members</span>
+                <span class="arrow">›</span>
+            </div>
+            <div class="settings-item">
+                <span>Parental Controls</span>
+                <span class="arrow">›</span>
+            </div>
+            <div class="settings-item">
+                <span>Emergency Contacts</span>
                 <span class="arrow">›</span>
             </div>
         </div>
 
+        <!-- Notifications & Communication -->
         <div class="settings-section">
-            <h3>Notifications</h3>
+            <h3>Notifications & Communication</h3>
             <div class="settings-item">
-                <span>Activity Notifications</span>
+                <span>Push Notifications</span>
                 <label class="toggle-switch">
                     <input type="checkbox" checked>
                     <span class="slider"></span>
                 </label>
             </div>
             <div class="settings-item">
-                <span>Email Notifications</span>
+                <span>Email & SMS Alerts</span>
                 <label class="toggle-switch">
                     <input type="checkbox">
                     <span class="slider"></span>
@@ -54,17 +66,65 @@
             </div>
         </div>
 
+        <!-- Security & Privacy -->
         <div class="settings-section">
-            <h3>Security</h3>
+            <h3>Security & Privacy</h3>
             <div class="settings-item">
-                <span>Sign in with Touch ID</span>
+                <span>Two-Factor Authentication</span>
                 <label class="toggle-switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox">
                     <span class="slider"></span>
                 </label>
             </div>
             <div class="settings-item">
-                <span>Change Password</span>
+                <span>Location Sharing</span>
+                <span class="arrow">›</span>
+            </div>
+            <div class="settings-item">
+                <span>Blocked Users</span>
+                <span class="arrow">›</span>
+            </div>
+        </div>
+
+        <!-- Events & Task Management -->
+        <div class="settings-section">
+            <h3>Events & Task Management</h3>
+            <div class="settings-item">
+                <span>Family Calendar</span>
+                <span class="arrow">›</span>
+            </div>
+            <div class="settings-item">
+                <span>Chores & Task Assignments</span>
+                <span class="arrow">›</span>
+            </div>
+        </div>
+
+        <!-- Subscriptions & Billing -->
+        <div class="settings-section">
+            <h3>Subscriptions & Billing</h3>
+            <div class="settings-item">
+                <span>Membership Plan</span>
+                <span class="arrow">›</span>
+            </div>
+            <div class="settings-item">
+                <span>Payment Methods</span>
+                <span class="arrow">›</span>
+            </div>
+        </div>
+
+        <!-- Support & Help Center -->
+        <div class="settings-section">
+            <h3>Support & Help Center</h3>
+            <div class="settings-item">
+                <span>FAQs & Guides</span>
+                <span class="arrow">›</span>
+            </div>
+            <div class="settings-item">
+                <span>Report an Issue</span>
+                <span class="arrow">›</span>
+            </div>
+            <div class="settings-item">
+                <span>Contact Support</span>
                 <span class="arrow">›</span>
             </div>
         </div>
