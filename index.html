@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Family Networking</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="settings-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Settings</h2>
+            <ul>
+                <li onclick="showSection('profile')">Profile</li>
+                <li onclick="showSection('account')">Account</li>
+                <li onclick="showSection('notifications')">Notifications</li>
+                <li onclick="showSection('family')">Family & Connections</li>
+                <li onclick="showSection('billing')">Subscription & Billing</li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="settings-content">
+            <section id="profile" class="settings-section">
+                <h3>Profile Settings</h3>
+                <label>Name:</label> <input type="text" placeholder="Your Name">
+                <label>Profile Picture:</label> <input type="file">
+                <label>Bio:</label> <textarea placeholder="Write a short bio..."></textarea>
+            </section>
+
+            <section id="account" class="settings-section">
+                <h3>Account Settings</h3>
+                <label>Email:</label> <input type="email" value="user@example.com">
+                <label>Password:</label> <button>Change Password</button>
+            </section>
+
+            <section id="notifications" class="settings-section">
+                <h3>Notification Settings</h3>
+                <label>Email Alerts:</label> <input type="checkbox" checked>
+                <label>Mobile Alerts:</label> <input type="checkbox">
+            </section>
+
+            <section id="family" class="settings-section">
+                <h3>Family & Connections</h3>
+                <button>Add Family Member</button>
+            </section>
+
+            <section id="billing" class="settings-section">
+                <h3>Subscription & Billing</h3>
+                <p>Current Plan: Free</p>
+                <button>Upgrade Plan</button>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
