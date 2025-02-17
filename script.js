@@ -1,4 +1,4 @@
-document.getElementById('menu-toggle').addEventListener('click', function() {
+document.getElementById('menu-toggle')?.addEventListener('click', function() {
     let sidebar = document.getElementById('sidebar');
     sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
 });
@@ -10,7 +10,10 @@ function showSection(sectionId) {
     });
 
     // Show the selected section
-    document.getElementById(sectionId).classList.add('active');
+    let selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.classList.add('active');
+    }
 
     // Close the sidebar after selection (for mobile)
     let sidebar = document.getElementById('sidebar');
@@ -25,8 +28,15 @@ document.addEventListener('click', function(event) {
     let menuToggle = document.getElementById('menu-toggle');
 
     if (window.innerWidth <= 768) {
-        if (sidebar.style.display === 'block' && !sidebar.contains(event.target) && event.target !== menuToggle) {
+        if (sidebar && sidebar.style.display === 'block' && !sidebar.contains(event.target) && event.target !== menuToggle) {
             sidebar.style.display = 'none';
         }
     }
+});
+
+// Add interactivity to toggle switches
+document.querySelectorAll('.toggle-switch input').forEach(toggle => {
+    toggle.addEventListener('change', function() {
+        console.log(`${this.parentElement.previousElementSibling.innerText} is now ${this.checked ? 'ON' : 'OFF'}`);
+    });
 });
