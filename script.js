@@ -22,6 +22,10 @@ function showSection(sectionId) {
     }
 }
 
+function uploadProfilePicture() {
+    alert("Profile picture upload feature coming soon!");
+}
+
 // Close menu when clicking outside (optional)
 document.addEventListener('click', function(event) {
     let sidebar = document.getElementById('sidebar');
